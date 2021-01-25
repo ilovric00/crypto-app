@@ -4,7 +4,7 @@ Cryptocurrency finance price tracker app. This simple app use [CoinGecko](https:
 
 ## Demo
 
-![Demo](./public/demo.png)
+![Demo](./public/assets/images/demo.png)
 
 ---
 
