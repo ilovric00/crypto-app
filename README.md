@@ -1,46 +1,102 @@
-# Getting Started with Create React App
+# Crypto App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cryptocurrency finance price tracker app. This simple app use [CoinGecko](https://www.coingecko.com/) for providing a wide variety of data on many different crypto assets.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+![Demo](./public/demo.png)
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to use
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+First, make sure you have `Node.js` (**npm** or **yarn**) installed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ node -v
+v12.x.x
+```
 
-### `yarn build`
+Also, you can use `nvm` as a helpful tool to install the correct **node** and **npm**/**yarn** version.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installing the application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+$ git clone https://github.com/ilovric00/crypto-app.git <my-project-name>
+$ cd <my-project-name>
+$ yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_This command will install all of the latest dependencies. Installation might take some time._
 
-### `yarn eject`
+### Running the application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser._
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Building the application
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+$ yarn build
+```
 
-## Learn More
+_Builds the application for production usage._
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built with
+
+- [React](https://github.com/facebook/react/) as JavaScript library for building user interfaces
+- [TypeScript](https://github.com/microsoft/TypeScript) as a language for application-scale JavaScript
+- [Sass](https://github.com/sass/dart-sass) as CSS pre-processor
+
+## Libraries
+
+In addition several smaller libraries are used. Instructions on how to use them are linked below.
+
+| Library                                               | Purpose                                                 |
+| ----------------------------------------------------- | ------------------------------------------------------- |
+| [Classnames](https://github.com/JedWatson/classnames) | for conditionally joining classNames together           |
+| [ESLint](https://github.com/eslint/eslint)            | for making code more consistent and avoiding bugs       |
+| [Stylelint](https://github.com/stylelint/stylelint)   | for avoiding errors and enforcing conventions in styles |
+| [Prettier](https://github.com/prettier/prettier)      | for code formatting                                     |
+| [Husky](https://github.com/typicode/husky)            | for preventing bad commit or push                       |
+
+See `package.json` for a complete overview.
+
+---
+
+## Folder structure
+
+```
+src
+├── components                                 # place for all reusable components
+│   └── {ComponentName}                        # reusable component
+│   │   ├── {ComponentName}.module.scss        # component styles
+│   │   ├── {ComponentName}.tsx                # component
+│   │   └── index.ts                           # for root component of a directory
+├── styles                                     # place to store global styles
+│   ├── globals                                # place for reset and base styling
+│   ├── mixins                                 # place to store all mixins
+│   ├── settings                               # place to store all fonts, colors, and breakpoints
+│   ├── utils                                  # place to store all utility functions for styling
+│   └── index.scss                             # styling entry point
+└── types                                      # place to store all types
+```
+
+## Style Guide
+
+As a "base" style guide, the [Airbnb's style guide](https://airbnb.io/javascript/react) is being used. Since we're applying different eslint configs that are combined with Airbnb's [config](https://yarnpkg.com/package/eslint-config-airbnb), large number of these rules are already enforced.
+
+## Versioning
+
+This project use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/ilovric00/crypto-app/tags).
+
+## Contributing
+
+If you're interested in contributing to this project, please first discuss the change you wish to make via issue, email, or any other method with the owner of this repository before submitting a pull request.
