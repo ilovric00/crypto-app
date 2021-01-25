@@ -1,3 +1,36 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/utils/rem-calc.scss';
+
 .container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: rem-calc(64);
+  color: $white;
+
+  .searchBox {
+    margin-bottom: rem-calc(64);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .input {
+      width: rem-calc(300);
+      height: rem-calc(50);
+      border-radius: rem-calc(4);
+      border: 1px solid $grey-200;
+      padding-left: rem-calc(16);
+      color: $grey-200;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $grey-100;
+      }
+
+      &::placeholder {
+        color: $grey-200;
+      }
+    }
+  }
 }

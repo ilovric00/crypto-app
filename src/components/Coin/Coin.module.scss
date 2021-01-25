@@ -1,0 +1,70 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/utils/rem-calc.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: rem-calc(80);
+    border-bottom: 1px solid $grey-100;
+    width: rem-calc(900);
+
+    .coin {
+      display: flex;
+      align-items: center;
+      padding-right: rem-calc(24);
+      min-width: rem-calc(300);
+
+      h1 {
+        font-size: rem-calc(16);
+        width: rem-calc(150);
+      }
+
+      img {
+        height: rem-calc(30);
+        width: rem-calc(30);
+        margin-right: rem-calc(10);
+      }
+
+      .symbol {
+        text-transform: uppercase;
+      }
+    }
+
+    .data {
+      display: flex;
+      text-align: right;
+      justify-content: space-between;
+      width: 100%;
+
+      .price {
+        width: rem-calc(110);
+      }
+
+      .volume {
+        width: rem-calc(155);
+      }
+
+      .percent {
+        width: rem-calc(100);
+
+        &.green {
+          color: $green;
+        }
+
+        &.red {
+          color: $red;
+        }
+      }
+
+      .marketcap {
+        width: rem-calc(230);
+      }
+    }
+  }
+}
